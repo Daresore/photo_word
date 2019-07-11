@@ -3,54 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Photo_word</title>
-    <style>
-        .elemimg{
-            width: 150px;
-            height: 150px;
-            margin: 0px 5px 0px 5px;
-            border: solid 5px dimgrey;
-        }
-        .answer{
-            width: 50px;
-            height: 50px;
-            background: black;
-            margin: 0px 2px 0px 2px;
-            border-radius: 5px;
-        }
-        .answer2{
-            width: 65px;
-            height: 65px;
-            background: grey;
-            margin: 0px 5px 0px 5px;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body style="display: flex; justify-content: center; flex-direction: column; align-items: center" bgcolor="#2D2D3f">
-<div style="margin-top:20px; display: inline-block; vertical-align: top">
-    <p><img src="lion.orig.jpg" class="elemimg">
-        <img src="cat.jpg" class="elemimg"></p>
-    <p><img src="dog.jpg" class="elemimg">
-        <img src="wolf.jpg" class="elemimg"></p>
-</div>
-<div style="margin-top:20px; display: flex; vertical-align: top">
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-    <div class="answer"></div>
-</div>
-<div style="margin-top:20px; display: flex; vertical-align: top">
-    <div class="answer2">Я</div>
 </div>
 </body><!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Photo_word</title>
     <style>
         .elemimg{
             width: 150px;
@@ -86,7 +42,7 @@
 </head>
 <body style="display: flex; justify-content: center; flex-direction: column; align-items: center" bgcolor="#2D2D3f">
 <div style="margin-top:20px; display: inline-block; vertical-align: top">
-    <p><img id="1" src="lion.orig.jpg" class="elemimg">
+    <p><img id="li" src="lion.orig.jpg" class="elemimg">
         <img src="cat.jpg" class="elemimg"></p>
     <p><img src="dog.jpg" class="elemimg">
         <img src="wolf.jpg" class="elemimg"></p>
@@ -110,7 +66,7 @@
     <div onclick="click1('Т')" class="answer2">Т</div>
     <div onclick="click1('Р')" class="answer2">Р</div>
     <div onclick="click1('Л')" class="answer2">Л</div>
-    <div class="answer2">♺</div>
+    <div onclick="dele()" class="answer2">♺</div>
 </div>
 <div style="margin-top:20px; display: flex; vertical-align: top">
     <div onclick="click1('Ы')" class="answer2">Ы</div>
@@ -163,12 +119,29 @@
         src7 = document.getElementById(id7).innerHTML
         src8 = document.getElementById(id8).innerHTML
         if (src1 == 'Ж'&&src2 == 'И'&&src3 == 'В'&&src4 == 'О'&&src5 == 'Т'&&src6 == 'Н'&&src7 == 'Ы'&&src8 == 'Е'){
-
+            document.getElementById("o1").innerHTML = ''
+            document.getElementById("o2").innerHTML = ''
+            document.getElementById("o3").innerHTML = ''
+            document.getElementById("o4").innerHTML = ''
+            document.getElementById("o5").innerHTML = ''
+            document.getElementById("o6").innerHTML = ''
+            document.getElementById("o7").innerHTML = ''
+            document.getElementById("o8").innerHTML = ''
         }
     }
     function realcheck() {
-        check(o1,o2,o3,o4,o5,o6,o7,o8)
+        check("o1","o2","o3","o4","o5","o6","o7","o8")
+    }
+    function dele() {
+      hod = 0
+        document.getElementById("o1").innerHTML = ''
+        document.getElementById("o2").innerHTML = ''
+        document.getElementById("o3").innerHTML = ''
+        document.getElementById("o4").innerHTML = ''
+        document.getElementById("o5").innerHTML = ''
+        document.getElementById("o6").innerHTML = ''
+        document.getElementById("o7").innerHTML = ''
+        document.getElementById("o8").innerHTML = ''
     }
 </script>
 </html>
-   
